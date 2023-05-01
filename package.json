@@ -1,0 +1,17 @@
+{
+	"name": "lukex",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"lukex": "plop --plopfile src/plopfile.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"eslint": "^8.39.0",
+		"plop": "3.1.2"
+	}
+}
