@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { existsSync } from 'fs';
 import path from "node:path";
 import minimist from "minimist";

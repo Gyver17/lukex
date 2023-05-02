@@ -4,3 +4,4 @@ tslint.json
 tsconfig.json
 .eslintrc.json
 .prettierrc
+/test

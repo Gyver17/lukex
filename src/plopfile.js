@@ -1,14 +1,7 @@
-import path from 'path';
-import { fileURLToPath } from 'url';
-// eslint-disable-next-line no-unused-vars
-// import { NodePlopAPI } from "plop";
-
-/**
- * 
- * @param {NodePlopAPI} plop 
- */
-
-export default function PlopGenerator(plop) {
+export default function PlopGenerator(
+	/** @type {import('plop').NodePlopAPI} */
+	plop
+) {
 	// create your generators here
 	plop.setGenerator('controller', {
 		description: 'application controller logic',
