@@ -1,3 +1,5 @@
+import path from 'path';
+import { fileURLToPath } from 'url';
 // eslint-disable-next-line no-unused-vars
 // import { NodePlopAPI } from "plop";
 
@@ -13,13 +15,13 @@ export default function PlopGenerator(plop) {
 		prompts: [{
 			type: 'input',
 			name: 'name',
-			message: 'controller name please'
+			message: 'module name please'
 		}],
 		actions: [{
 			type: 'addMany',
 			// templateFile: 'templates/module',
 			templateFiles: "templates/module/**/*",
-			destination: 'src/{{name}}',
+			destination: process.cwd() + '/test/{{name}}',
 			base: 'templates/module'
 		}]
 	});

@@ -1,0 +1,30 @@
+import { {{pascalCase name}}CreateDto, {{pascalCase name}}UpdateDto } from "./models";
+import { For{{pascalCase name}}Repository } from "./ports";
+
+export class {{pascalCase name}}App {
+	private readonly repository: For{{pascalCase name}}Repository;
+
+	constructor(repository: For{{pascalCase name}}Repository) {
+		this.repository = repository;
+	}
+
+	async getAll() {
+		return await this.repository.getAll();
+	}
+
+	async getOne(id: number) {
+		return await this.repository.getOne(id);
+	}
+
+	async create(data: {{pascalCase name}}CreateDto) {
+		return await this.repository.create(data);
+	}
+
+	async update(data: {{pascalCase name}}UpdateDto) {
+		return await this.repository.update(data);
+	}
+
+	async delete(id: number) {
+		return await this.repository.delete(id);
+	}
+}
