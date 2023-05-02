@@ -1,6 +1,6 @@
 {
 	"name": "lukex",
-	"version": "1.0.0",
+	"version": "1.0.3",
 	"description": "",
 	"main": "bin/index.js",
 	"type": "module",
@@ -13,8 +13,11 @@
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
-	"devDependencies": {
-		"eslint": "^8.39.0",
+	"dependencies": {
+		"minimist": "1.2.8",
 		"plop": "3.1.2"
+	},
+	"devDependencies": {
+		"eslint": "8.39.0"
 	}
 }
