@@ -1,0 +1,6 @@
+# configuration
+package-lock.json
+tslint.json
+tsconfig.json
+.eslintrc.json
+.prettierrc

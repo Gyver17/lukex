@@ -2,10 +2,13 @@
 	"name": "lukex",
 	"version": "1.0.0",
 	"description": "",
-	"main": "index.js",
+	"main": "bin/index.js",
 	"type": "module",
 	"scripts": {
-		"lukex": "plop --plopfile src/plopfile.js"
+		"start": "plop --plopfile src/plopfile.js"
+	},
+	"bin": {
+		"lukex": "bin/index.js"
 	},
 	"keywords": [],
 	"author": "",
