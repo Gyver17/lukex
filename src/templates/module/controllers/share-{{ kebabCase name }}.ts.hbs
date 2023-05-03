@@ -1,10 +1,10 @@
 import { {{pascalCase name}}CreateDto, {{pascalCase name}}UpdateDto } from "../app/models";
-import { For{{pascalCase name}}Crud } from "../app/ports";
+import { ForShare{{pascalCase name}} } from "../app/ports";
 
-export class ShareCrud implements ForShareCrud {
-	private readonly app: For{{pascalCase name}}Crud;
+export class Share{{pascalCase name}} implements ForShare{{pascalCase name}} {
+	private readonly app: ForShare{{pascalCase name}};
 
-	constructor(app: For{{pascalCase name}}Crud) {
+	constructor(app: ForShare{{pascalCase name}}) {
 		this.app = app;
 	}
 

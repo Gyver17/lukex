@@ -1,1 +1,7 @@
-import { {{name}} } from '../models/{{name}}'
+import { compositionRoot } from "./app/composition-root";
+
+const {{camelCase name}}Module = compositionRoot();
+
+export const {{camelCase name}}Routes = {{camelCase name}}Module.routes;
+
+export const {{camelCase name}}Services = {{camelCase name}}Module.share;

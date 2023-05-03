@@ -24,7 +24,7 @@ export default function PlopGenerator(
 			type: 'addMany',
 			// templateFile: 'templates/module',
 			templateFiles: "templates/module/**/*",
-			destination: process.cwd() + '/{{path}}/{{name}}',
+			destination: process.cwd() + '/test/{{path}}/{{name}}',
 			base: 'templates/module'
 		}]
 	});
