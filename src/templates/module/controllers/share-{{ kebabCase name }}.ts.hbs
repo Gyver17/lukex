@@ -1,0 +1,30 @@
+import { {{pascalCase name}}CreateDto, {{pascalCase name}}UpdateDto } from "../app/models";
+import { For{{pascalCase name}}Crud } from "../app/ports";
+
+export class ShareCrud implements ForShareCrud {
+	private readonly app: For{{pascalCase name}}Crud;
+
+	constructor(app: For{{pascalCase name}}Crud) {
+		this.app = app;
+	}
+
+	async getAll() {
+		return await this.app.getAll();
+	}
+
+	async getOne(id: number) {
+		return this.app.getOne(id);
+	}
+
+	async create(data: {{pascalCase name}}CreateDto) {
+		return this.app.create(data);
+	}
+
+	async update(data: {{pascalCase name}}UpdateDto) {
+		return this.app.update(data);
+	}
+
+	async delete(id: number) {
+		return this.app.delete(id);
+	}
+}
