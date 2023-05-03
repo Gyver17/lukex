@@ -109,4 +109,24 @@ export default function PlopGenerator(
 			base: 'templates/services'
 		}]
 	})
+
+	plop.setGenerator('model', {
+		description: 'Generate a new model',
+		prompts: [{
+			type: 'input',
+			name: 'name',
+			message: 'model name please',
+		}, {
+			type: 'input',
+			name: 'path',
+			message: 'model path please',
+			default: '/',
+		}],
+		actions: [{
+			type: 'addMany',
+			templateFiles: "templates/models/**/*",
+			destination: process.cwd() + `/${rootPath}` + '/{{path}}',
+			base: 'templates/models'
+		}]
+	})
 }
