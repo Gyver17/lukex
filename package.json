@@ -1,6 +1,6 @@
 {
 	"name": "lukex",
-	"version": "1.1.7",
+	"version": "1.1.8",
 	"description": "Lukex is a CLI tool ",
 	"main": "bin/index.js",
 	"type": "module",
