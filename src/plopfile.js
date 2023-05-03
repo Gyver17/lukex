@@ -5,7 +5,7 @@ export default function PlopGenerator(
 	a
 ) {
 
-	const rootPath = 'test';
+	const rootPath = 'src';
 
 	plop.setWelcomeMessage('Welcome to the Lukex generator!');
 
