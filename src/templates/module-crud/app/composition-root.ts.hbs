@@ -1,0 +1,20 @@
+import { {{camelCase name}}Http, Share{{pascalCase name}} } from "../controllers";
+import { {{pascalCase name}}Repository } from "../services";
+import { {{pascalCase name}}App } from "./{{kebabCase name}}";
+
+export function compositionRoot() {
+	// Service to be injected
+	const repository = new {{pascalCase name}}Repository();
+
+	// App composition
+	const app = new {{pascalCase name}}App(repository);
+
+	// Controllers
+	const routes = {{camelCase name}}Http(app);
+	const share = new Share{{pascalCase name}}(app);
+
+	return {
+		routes,
+		share,
+	};
+}

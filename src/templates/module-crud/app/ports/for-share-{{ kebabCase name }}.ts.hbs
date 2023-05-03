@@ -1,0 +1,9 @@
+import { {{pascalCase name}}CreateDto, {{pascalCase name}}UpdateDto } from "../models";
+
+export interface ForShare{{pascalCase name}} {
+	getAll(): void;
+	getOne(id: number): void;
+	create(data: {{pascalCase name}}CreateDto): void;
+	update(data: {{pascalCase name}}UpdateDto): void;
+	delete(id: number): void;
+}

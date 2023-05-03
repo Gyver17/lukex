@@ -1,9 +1,11 @@
 export default function PlopGenerator(
 	/** @type {import('plop').NodePlopAPI} */
-	plop
+	plop,
+	s,
+	a
 ) {
 
-
+	const rootPath = 'test';
 
 	plop.setWelcomeMessage('Welcome to the Lukex generator!');
 
@@ -18,14 +20,14 @@ export default function PlopGenerator(
 			type: 'input',
 			name: 'path',
 			message: 'module path please',
-			default: '/'
+			default: '/',
 		}],
 		actions: [{
 			type: 'addMany',
 			// templateFile: 'templates/module',
-			templateFiles: "templates/module/**/*",
-			destination: process.cwd() + '/test/{{path}}/{{name}}',
-			base: 'templates/module'
+			templateFiles: "templates/module-crud/**/*",
+			destination: process.cwd() + `/${rootPath}` + '/{{path}}/{{name}}',
+			base: 'templates/module-crud'
 		}]
 	});
 

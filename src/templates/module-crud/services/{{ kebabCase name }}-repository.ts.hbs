@@ -1,0 +1,24 @@
+import { For{{pascalCase name}}Repository } from "../app/ports";
+import { {{pascalCase name}}CreateDto, {{pascalCase name}}UpdateDto } from "../app/models";
+
+export class {{pascalCase name}}Repository implements For{{pascalCase name}}Repository {
+	public getAll() {
+		console.log("{{pascalCase name}}Repository read all");
+	}
+
+	public getOne(id: number) {
+		console.log("{{pascalCase name}}Repository read one");
+	}
+
+	public create(data: {{pascalCase name}}CreateDto) {
+		console.log("{{pascalCase name}}Repository create");
+	}
+
+	public update(data: {{pascalCase name}}UpdateDto) {
+		console.log("{{pascalCase name}}Repository update");
+	}
+
+	public delete(id: number) {
+		console.log("{{pascalCase name}}Repository delete");
+	}
+}

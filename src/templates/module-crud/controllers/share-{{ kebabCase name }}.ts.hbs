@@ -1,0 +1,30 @@
+import { {{pascalCase name}}CreateDto, {{pascalCase name}}UpdateDto } from "../app/models";
+import { ForShare{{pascalCase name}} } from "../app/ports";
+
+export class Share{{pascalCase name}} implements ForShare{{pascalCase name}} {
+	private readonly app: ForShare{{pascalCase name}};
+
+	constructor(app: ForShare{{pascalCase name}}) {
+		this.app = app;
+	}
+
+	async getAll() {
+		return await this.app.getAll();
+	}
+
+	async getOne(id: number) {
+		return this.app.getOne(id);
+	}
+
+	async create(data: {{pascalCase name}}CreateDto) {
+		return this.app.create(data);
+	}
+
+	async update(data: {{pascalCase name}}UpdateDto) {
+		return this.app.update(data);
+	}
+
+	async delete(id: number) {
+		return this.app.delete(id);
+	}
+}

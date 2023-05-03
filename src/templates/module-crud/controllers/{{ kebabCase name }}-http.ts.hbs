@@ -1,0 +1,94 @@
+import { Router } from "express";
+import { For{{pascalCase name}}Http } from "../app/ports/{{kebabCase name}}-http";
+
+export function {{camelCase name}}Http(app: For{{pascalCase name}}Http) {
+	const router = Router();
+
+	/**
+	 * @api {get} /api/{{kebabCase name}}/ Get all
+	 * @apiName GetAll
+	 * @apiGroup {{sentenceCase name}}
+	 * @apiVersion  1.0.0
+	 *
+	 */
+	router.get("/{{kebabCase name}}", async (req, res, next) => {
+		try {
+			await app.getAll();
+			res.send("OK");
+		} catch (error) {
+			next(error);
+		}
+	});
+
+	/**
+	 * @api {get} /api/{{kebabCase name}}/:id Get one
+	 * @apiName GetOne
+	 * @apiGroup {{sentenceCase name}}
+	 * @apiVersion  1.0.0
+	 *
+	 * @apiParam  {String} id ID of the resource
+	 *
+	 */
+	router.get("/{{kebabCase name}}/:id", (req, res, next) => {
+		try {
+			app.getOne(parseInt(req.params.id));
+			res.send("OK");
+		} catch (error) {
+			next(error);
+		}
+	});
+
+	/**
+	 * @api {post} /api/{{kebabCase name}}/ Create
+	 * @apiName Create
+	 * @apiGroup {{sentenceCase name}}
+	 * @apiVersion  1.0.0
+	 *
+	 */
+	router.post("/{{kebabCase name}}", (req, res, next) => {
+		try {
+			app.create(req.body);
+			res.send("OK");
+		} catch (error) {
+			next(error);
+		}
+	});
+
+	/**
+	 * @api {put} /api/{{kebabCase name}}/:id Update
+	 * @apiName Update
+	 * @apiGroup {{sentenceCase name}}
+	 * @apiVersion  1.0.0
+	 *
+	 * @apiParam  {String} id ID of the resource
+	 *
+	 */
+	router.put("/{{kebabCase name}}/:id", (req, res, next) => {
+		try {
+			app.update(req.body);
+			res.send("OK");
+		} catch (error) {
+			next(error);
+		}
+	});
+
+	/**
+	 * @api {delete} /api/{{kebabCase name}}/:id Delete
+	 * @apiName Delete
+	 * @apiGroup {{sentenceCase name}}
+	 * @apiVersion  1.0.0
+	 *
+	 * @apiParam  {String} id ID of the resource
+	 *
+	 */
+	router.delete("/{{kebabCase name}}/:id", (req, res, next) => {
+		try {
+			app.delete(parseInt(req.params.id));
+			res.send("OK");
+		} catch (error) {
+			next(error);
+		}
+	});
+
+	return router;
+}
