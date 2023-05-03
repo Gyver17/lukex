@@ -1,6 +1,6 @@
 {
 	"name": "lukex",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "Lukex is a CLI tool for express.js that implements the hexagonal architecture",
 	"main": "bin/index.js",
 	"type": "module",
