@@ -12,8 +12,6 @@ const localBinExists = existsSync(path.join(...localBinPathSegments));
 
 const configPath = localBinExists ? path.join(...localBinPathSegments, 'src/plopfile.js') : path.join(process.cwd(), 'src/plopfile.js');
 
-console.log('configPath', configPath);
-
 Plop.prepare({
     cwd: argv.cwd,
     configPath,
